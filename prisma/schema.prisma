@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum Problem {
+    Root
+    Linear
+    Interpolation
+    Exterpolation
+    Integration
+    Differentiation
+}
+
+model Info {
+    id       String  @id @default(cuid())
+    Problem  Problem
+    solution String  @unique
+    xl       Float   @default(0)
+    xr       Float   @default(0)
+    size     Int     @default(0)
+}
+
+model Inter {
+    id      String  @id @default(cuid())
+    Problem Problem
+    x       Float[]
+    Fx      Float[]
+    xvalue  Float   @default(0)
+    size    Int     @default(0)
+}
+
+model Simpson {
+    id       String  @id @default(cuid())
+    Problem  Problem
+    solution String  @unique
+    xstart   Float
+    xend     Float
+    n        Int     @default(0)
+}
