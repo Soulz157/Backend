@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Numerical API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/info/root": {
+      "get": {
+        "tags": ["INFO"],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/info/linear": {
+      "get": {
+        "tags": ["INFO"],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/info/Interpolation": {
+      "get": {
+        "tags": ["INFO"],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/info/Integration": {
+      "get": {
+        "tags": ["INFO"],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    }
+  }
+}
