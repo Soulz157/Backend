@@ -77,29 +77,30 @@ app.get('/info/Interpolation', async (req, res) => {
     }
 });
 
-app.get(`/api`, async (req, res) => {
-    try {
-        const solution = await prisma.Simpson.findMany(
-            {
-                where: {
-                    Problem: "Differentiation"
-                }
+adadad
+// app.get(`/api`, async (req, res) => {
+//     try {
+//         const solution = await prisma.Simpson.findMany(
+//             {
+//                 where: {
+//                     Problem: "Differentiation"
+//                 }
 
-            }
-        )
-        return res.status(200).json({
-            result: true,
-            status: "success",
-            data: solution
-        })
-    } catch (error) {
-        return res.status(400).json({
-            result: false,
-            status: "fail",
-            msg: "ไม่พบข้อมูล",
-        })
-    }
-});
+//             }
+//         )
+//         return res.status(200).json({
+//             result: true,
+//             status: "success",
+//             data: solution
+//         })
+//     } catch (error) {
+//         return res.status(400).json({
+//             result: false,
+//             status: "fail",
+//             msg: "ไม่พบข้อมูล",
+//         })
+//     }
+// });
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
