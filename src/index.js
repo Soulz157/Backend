@@ -77,7 +77,7 @@ app.get('/info/Interpolation', async (req, res) => {
     }
 });
 
-adadad
+
 // app.get(`/api`, async (req, res) => {
 //     try {
 //         const solution = await prisma.Simpson.findMany(
